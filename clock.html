@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p id="hour">06</p>
+        </div>
+        <div class="box">
+            <p id="min">45</p>
+        </div>
+        <div class="box">
+            <p id="sec">34</p>
+        </div>
+    </div>
+</body>
+<script>
+    setInterval(clock,1000)
+    function clock(){
+    var d = new Date();
+    var hr = d.getHours();
+    var min = d.getMinutes();
+    var sec = d.getSeconds();
+    document.getElementById("hour").innerHTML = hr+" HR";
+    document.getElementById("min").innerHTML = min+" MIN";
+    document.getElementById("sec").innerHTML = sec+" SEC"; 
+    }
+</script>
+
+</html>
